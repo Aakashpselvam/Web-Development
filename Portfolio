@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panneerselvam M - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c3e50, #1abc9c);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    nav {
+      background-color: #34495e;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      gap: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      color: #2c3e50;
+      border-left: 5px solid #1abc9c;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+      line-height: 1.8;
+    }
+
+    .about p {
+      line-height: 1.7;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      background-color: #ecf0f1;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 10px 0;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .tab:hover, .tab.active {
+      background-color: #1abc9c;
+      color: white;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Panneerselvam M</h1>
+    <p>Assistant Superintendent of Police (CBI) | Investigator | Leader</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#profile">Profile</a>
+    <a href="#tabs">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="main">
+    <div class="card about" id="about">
+      <h2>About Me</h2>
+      <p>
+        A <strong>dedicated law enforcement professional</strong> with over a decade of service in the 
+        <strong>Central Bureau of Investigation (CBI)</strong>. I specialize in criminal investigation, 
+        case management, and team leadership. Known for maintaining integrity and professionalism while 
+        handling complex cases and leading operational teams.
+      </p>
+    </div>
+
+    <div class="card" id="profile">
+      <h2>Profile Summary</h2>
+      <ul>
+        <li><strong>Age:</strong> 47 years</li>
+        <li><strong>Location:</strong> Thanjavur, Tamil Nadu</li>
+        <li><strong>Qualification:</strong> B.P.Ed – Bharathidasan University</li>
+        <li><strong>Experience:</strong> 16+ years in Law Enforcement</li>
+        <li><strong>Position:</strong> Assistant Superintendent of Police (CBI)</li>
+      </ul>
+    </div>
+
+    <div class="card" id="tabs">
+      <h2>Professional Details</h2>
+      <div class="tabs">
+        <div class="tab active" data-target="skills">Skills</div>
+        <div class="tab" data-target="experience">Experience</div>
+        <div class="tab" data-target="achievements">Achievements</div>
+      </div>
+
+      <div id="skills" class="tab-content active">
+        <ul>
+          <li>Criminal investigation & case analysis</li>
+          <li>Law enforcement operations</li>
+          <li>Leadership & coordination</li>
+          <li>Public safety & crisis management</li>
+          <li>Physical training & discipline</li>
+        </ul>
+      </div>
+
+      <div id="experience" class="tab-content">
+        <p><strong>Assistant Superintendent of Police – CBI (2009 – Present)</strong></p>
+        <ul>
+          <li>Oversaw multiple high-profile investigations and forensic analyses.</li>
+          <li>Supervised operational units and coordinated inter-agency collaboration.</li>
+          <li>Developed preventive strategies for organized crime and corruption cases.</li>
+        </ul>
+      </div>
+
+      <div id="achievements" class="tab-content">
+        <ul>
+          <li>🏅 CBI Excellence Award – 2015</li>
+          <li>🏆 Leadership in Law Enforcement – 2018</li>
+          <li>🎖️ State Police Commendation Medal – 2020</li>
+          <li>Led high-profile operations ensuring justice and security.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" id="education">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Physical Education (B.P.Ed)</strong></p>
+      <p><em>Bharathidasan University, Tamil Nadu</em></p>
+      <p>Graduated with strong academic performance and excellence in physical education and leadership.</p>
+    </div>
+
+    <div class="card" id="contact">
+      <h2>Contact</h2>
+      <div class="contact-info">
+        <p><strong>📞 Phone:</strong> +91 74897 73397</p>
+        <p><strong>📧 Email:</strong> panneerselvam.m@email.com</p>
+        <p><strong>📍 Location:</strong> Thanjavur, Tamil Nadu, India</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Panneerselvam M | All Rights Reserved
+  </footer>
+
+  <script>
+    // Simple JS for interactive tabs
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.target).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
